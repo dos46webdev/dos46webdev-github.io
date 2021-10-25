@@ -1,0 +1,6 @@
+RewriteEngine On
+# Let op! Er moet een .htaccess in de map van het subdomein staan met de tekst RewriteEngine On.
+# Eigen website voor subdomein
+RewriteCond %{HTTP_HOST} ^dossier46\.dos46\.nl$
+RewriteCond %{PATH_INFO} !^/dossier46
+RewriteRule (.*) /%1/$1 [L,END]

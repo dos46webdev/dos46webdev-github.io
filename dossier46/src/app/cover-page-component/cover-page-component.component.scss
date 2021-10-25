@@ -1,0 +1,24 @@
+.container {
+    background-image: url('../../assets/cover_img.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: content-box;
+    height: 1200px;
+    position: relative;
+    border: 3px solid green;
+}
+  
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-size: contain;
+    }
+}
