@@ -1,28 +1,19 @@
 
 
 
-<div style="  margin: 0;
-position:fixed;
-top: 50%;
-width: 100%;
-left: 50%;
--ms-transform: translate(-50%, -50%);
-transform: translate(-50%, -50%);
-z-index:1;">
-  <div style=" float: left;">
-    <!-- <button (click)="navigateToPage('left');"  >Left</button> -->
-    <button type="button" (click)="onPrevious()" [disabled]="index===0">Previous</button>
+<div style="height: 100%; width:100%;position:fixed;  z-index:10;" (swipeleft)="onNext()" (swiperight)="onPrevious()">
+<div>
+    <div>
+      <button type="button" (click)="onPrevious()" [disabled]="index===0">Previous</button>
 
-    </div>
-    <div style=" float:right;">
-      <!-- <button (click)="navigateToPage('right');">Right</button> -->
-      <button type="button" (click)="onNext()" [disabled]="this.index == this.routeNames.length - 1">Next</button>
-    </div> 
+      </div>
+      <div style=" float:right;">
+        <button type="button" (click)="onNext()" [disabled]="this.index == this.routeNames.length - 1">Next</button>
+      </div> 
+
+  </div>
 
 </div>
-
-
-
 
 <main [@Slider]="index" class="content">
   <router-outlet #outlet="outlet"></router-outlet>

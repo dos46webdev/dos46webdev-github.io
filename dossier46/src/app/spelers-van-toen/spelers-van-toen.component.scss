@@ -1,0 +1,130 @@
+.example-card {
+    // max-width: 400px;
+    margin-bottom: 32px;
+    background-color: rgba(0, 0, 0, 0.0);
+    
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .cardList {
+    padding: 10%;
+
+    justify-content: center;
+    background-image: url('../../assets/cork_board.jpg');
+    
+  }
+
+img {
+  border-radius: 50%;
+  max-width: 350px;
+  height: auto;
+  min-width:250px;
+  align-items: center;
+  border: solid;
+  border-color: grey;
+  margin:5%;
+  
+}
+
+.paragraph-title {
+  color:black;
+}
+.title {
+  font-size: 30pt;
+  line-height: 30pt;
+  
+  background:white;
+  padding: 5%;
+  border-radius: 20px;
+  border-top: solid;
+  border-width: 20px;
+}
+
+.video-title {
+  text-align: center;
+  font-size: 30pt;
+  line-height: 30pt;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 900;
+  background:white;
+  padding: 20px;
+  margin: 0 auto;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top: solid;
+  border-width: 20px;
+  margin-right: 20px;
+  margin-left: 40px;
+  
+}
+.avatar-image {
+  text-align: center;
+  max-height: 700px;
+  margin-right: 20px;
+  margin-left: 20px;
+  background: white;
+  border-radius: 20px;
+  margin-bottom: 5%;
+  
+}
+.paragraph {
+  background:white;
+  border-radius: 20px;
+  border-top: solid;
+  border-width: 20px;
+  border-color: red;
+  padding-bottom: 5%;
+}
+
+
+.video-card {
+  // border: solid;
+  // width:100%;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */ 
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.0);
+  margin-right: 20px;
+  margin-left: 40px;
+  margin-bottom:32px;
+}
+iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  }
+
+@media only screen and (max-width: 959px) {
+  .avatar-image {
+    max-height: auto;
+    margin-right: 0px;
+    margin-left: 0px;
+    // padding-bottom: 5%;
+  }
+  img {
+    max-width: 250px;
+    
+    min-width:0px;
+  }
+
+  .video-title {
+    margin-left:20px;
+  }
+  .cardList {
+    padding:0;
+  }
+
+  .video-card {
+    margin-left: 20px;
+    
+  }
+}
+

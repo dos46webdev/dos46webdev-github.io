@@ -1,24 +1,51 @@
-.container {
+.static-page-background {
     background-image: url('../../assets/cover_img.JPG');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-origin: content-box;
-    height: 1200px;
-    position: relative;
-    border: 3px solid green;
-}
-  
-.center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+    z-index:-1;
+    
 }
 
-@media only screen and (max-width: 600px) {
-    body {
-        background-size: contain;
+.title-image {
+    max-width: 60vw;
+    max-height: 60vh;
+
+
+}
+
+.cover-title{
+    text-align: center;
+    height: 100vh;
+}
+
+.title-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.title {
+    background: rgb(224,7,28,0.4);
+}
+.title2 {
+    padding: 2%;  
+    font-family: 'Oswald', sans-serif;
+    background: black;
+    color: white;
+    font-weight: 900;
+    padding: 2%;
+    font-size: 4vw;
+}
+.title a {
+    color:white;
+}
+
+
+@media only screen and (max-width: 959px) {
+    .title-image {
+        margin-top: 10%;
+        max-width: 90vw;
+        max-height: 60vh;
+        height: auto;
+        // height:100px;
+        overflow: visible;
     }
 }

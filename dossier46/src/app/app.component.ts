@@ -22,14 +22,27 @@ import {MatCardModule} from '@angular/material/card';
 
 
 export class AppComponent {
-  constructor(private router: Router){}
 
-  routeNames = ['cover', 'inhoud', 'inleiding']
-  currentRoute = this.routeNames[0]
-  routeCnt = this.routeNames.length
+  constructor(private router: Router){
+    this.router = router;
+    }
+  routeNames = ['cover', 'voorwoord', 'inhoud','bestuur','archief',
+                'spelers-van-toen','toekomst-kampweek','airdome',
+                'hoofd-jeugd-opleiding','walking-g-korfbal','kees-rodenburg',
+                'staf','team','grifteside','livestream','herberg-plein',
+                'derde-helft','sponsoren','vrijwilligers','activiteiten',
+                'programma-selectie']
+
   
-  index: number = 0;
+  // console.log(this.currentRoute);
+  routeCnt = this.routeNames.length;
+  index: number = this.routeNames.indexOf(this.router.url.replace('/',''));
+  
+  // index: number = 0;
   onNext() {
+    this.index = this.routeNames.indexOf(this.router.url.replace('/',''));
+
+    console.log(this.index)
     if (this.index + 1 < this.routeCnt) {
       
       console.log('navigating to right page')
@@ -40,6 +53,8 @@ export class AppComponent {
     }
   } 
   onPrevious(){
+    this.index = this.routeNames.indexOf(this.router.url.replace('/',''));
+    console.log(this.index)
       if (this.index - 1 >= 0) {
         console.log('navigating to left page')
         this.index--;

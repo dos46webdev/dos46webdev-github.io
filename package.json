@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "hammerjs": "^2.0.8"
+  },
+  "devDependencies": {
+    "@types/hammerjs": "^2.0.40"
+  }
+}

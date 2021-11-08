@@ -1,4 +1,171 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Courier New', Courier, monospace }
+
+
+@font-face {
+    font-family: Tampa_Bay;
+    src: url(./assets/NFL_Tampa_Bay_Buccaneers.otf) format("opentype");
+}
+
+
+.paragraph {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5%;
+    padding-bottom: 0;
+    font-size: 18pt;
+    line-height: 20pt;
+}
+
+.title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    color: black;
+    font-size: 12vh;
+    line-height: 18vh;
+}
+
+
+@media only screen and (min-width: 959px) {
+
+    .double-column{
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    
+}
+
+.double-column {
+    background: white;
+}
+
+.single-column {
+    color: red;
+    background: white;
+    margin-left: 20%;
+    margin-right: 20%;
+    // text-align: center;
+}
+
+.sub1 {
+    background:#E0074C; 
+    color:white;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.sub2 {
+    background: black;
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+
+}
+.page-background {
+    background: #e8e8e8;
+    width: 100%;
+}
+
+.paragraph-title {
+    color: red;
+    font-weight: 900;
+}
+
+.static-page-background {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+
+    // width: 100vw;
+
+}
+
+.image-header {
+    
+    position: relative;
+    background-repeat: no-repeat;
+    max-height: 100vh;
+    background-size: cover;
+    overflow: hidden;
+    img {
+        width: 100vw;
+    }
+}
+
+.text-block {
+    padding-top: 10%;
+    // margin-top: 40%;
+    margin-left: 50%;
+    margin-right: 20%;
+    padding-bottom: 5%;
+    min-height:  100vh;
+    background-color: rgba(255,255,255,0.8);
+    // overflow: scroll;
+}
+
+.link {
+    font-weight: 900;
+    color: black;
+    text-decoration-line: none;
+}
+
+a:hover {
+    color: #E0071C;
+}
+
+.paragraph-image {
+    box-shadow: 15px 15px 20px 5px rgb(0,0,0,0.4);
+    max-width:98%;
+    border: 10px solid white;
+    // outline: 10px solid, white;
+    margin-top:5%;
+    margin-bottom:5%;
+
+    
+    justify-content: center;
+
+}
+
+img {
+    max-width:100%;
+}
+@media only screen and (max-width: 959px) {
+    .title {
+        font-size: 10vw;
+        line-height: 15vw;
+    }
+
+    .single-column{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .double-column{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .paragraph {
+        padding-top: 3%;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .text-block {
+        padding-top: 10%;
+        // margin-top: 40%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-bottom: 5%;
+        min-height:  100vh;
+        background-color: rgba(255,255,255,0.8);
+        // overflow: scroll;
+    }
+
+}
+
+
+

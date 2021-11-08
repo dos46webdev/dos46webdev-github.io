@@ -1,0 +1,33 @@
+
+@media only screen and (min-width: 959px) {
+
+
+}
+.title {
+    font-size: 4vw;
+    line-height: 4vw;
+    margin-bottom: 2%;
+
+}
+
+b {
+    color: #E0071C;
+}
+
+.static-page-background {
+    background-image: url(../../assets/voorwoord_bg.jpg);
+
+}
+
+@media only screen and (max-width: 959px) {
+    .text-block {
+        padding-top: 10%;
+        // padding: 2%;
+        margin-left: 5%;
+        margin-right: 2%;
+    }
+    .title {
+        font-size: 12vw;
+        line-height: 12vw;
+    }
+}

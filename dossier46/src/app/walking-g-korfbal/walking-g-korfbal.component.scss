@@ -1,0 +1,41 @@
+.title {
+    width: 100%;
+    bottom: 5%;
+    padding:1%;
+    left: 5%;
+    position: relative;
+    line-height: 12vh;
+    // text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+
+}
+
+.text-block {
+    padding-top: 0;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+@media only screen and (max-width: 959px) {
+    .text-block {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+.static-page-background {
+    background-image: url('../../assets/walking_g_korfbal/DSC_0753.JPG');
+}
+
+
+.paragraph-title a {
+    color: black
+}
+
+
+@media only screen and (max-width: 959px) {
+    .title {
+        margin-top:10%;
+        font-size: 8vw;
+        line-height: 10vw;
+    }
+}

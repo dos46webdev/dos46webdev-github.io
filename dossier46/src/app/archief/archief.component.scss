@@ -1,0 +1,70 @@
+.title {
+    font-family: 'Tampa_Bay';
+    font-size: 140pt;
+    padding-left: 5%;
+    line-height: 120pt;
+    // text-align: center;
+    color: red;
+    padding-top: 5%;
+    z-index: 2;
+
+}
+
+.title2 {
+    font-family: 'Oswald';
+    
+    font-size: 8vw;
+    padding-left: 40%;
+    padding-right: 10%;
+    line-height: 8vw;
+    padding-top: 10%;
+    text-align: right;
+    color:white;
+    position: absolute;
+    // padding-top: 5%;
+    // z-index: 2;
+}
+.paragraph {
+    padding-top: 0;
+}
+.image-text {
+    background-image: url(../../assets/Archief.JPG);
+    width: 100vw;
+    // height: auto;
+    background-size: contain;
+}
+
+.single-column{
+    padding-top:2%;
+    color:black;
+}
+img {
+    // visibility: hidden;
+    // display: inline-block;
+    // position: absolute;
+    width: 100%;
+    // height: auto;
+}
+
+@media only screen and (max-width: 959px) {
+    .image-text {
+        background-size: cover;
+    }
+    .title {
+        font-size: 80pt;
+        line-height: 80pt;
+    }
+    .title2 {
+        font-family: 'Oswald';
+        font-size: 8vw;
+        padding-top: 5%;
+        vertical-align: center;
+        padding-left: 40%;
+        padding-right: 10%;
+        line-height: 8vw;
+        text-align: right;
+        color:white;
+        // padding-top: 5%;
+        z-index: 2;
+    }
+}
