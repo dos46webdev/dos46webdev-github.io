@@ -1,0 +1,93 @@
+.title {
+    width: 100%;
+    bottom: 5%;
+    padding:1%;
+    left: 5%;
+    position: absolute;
+
+}
+
+.title4 {
+    font-size: 8vw;
+    line-height: 8vw;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2%;
+    color: white;
+    padding-top: 2%;
+    font-family: 'Tampa_Bay';
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+
+
+
+}
+.sub3 {
+    padding-left: 0;
+}
+.title2 {
+    font-family: 'Oswald';
+    padding-top: 5%;
+    padding-bottom: 2%;
+    margin-left: 2%;
+    font-size: 6vw;
+    line-height: 6vw;
+    text-align: center;
+    color:black;
+
+    // padding-top: 5%;
+    // z-index: 2;
+}   
+
+.red {
+    background-color: red;
+    color: white;
+}
+
+.black {
+    background-color: black;
+    color:red
+}
+
+.white {
+    background-color: white;
+    color: red;
+}
+
+
+.data-box {
+    padding: 2%;
+    text-align: center;
+    
+    font-size: 10vw;    
+    font-family: 'Oswald';
+    font-size: 18pt;
+    line-height: 20pt;
+}
+.data-box h1{
+    
+    font-size: 15vw;    
+    font-family: 'Oswald';
+    font-weight: 900;
+    line-height: 14vw;
+    
+}
+
+.data-box h2 {
+    font-size: 4vw;
+    line-height: 4vw;    
+    font-family: 'Oswald';
+}
+.quote {
+    color:  #E0071C;
+    font-size: 20pt;
+    line-height: 22pt;
+    font-weight: 900;
+}
+
+
+@media only screen and (max-width: 959px) {
+    .title {
+        font-size: 8vw;
+        line-height: 12vw;
+    }
+}

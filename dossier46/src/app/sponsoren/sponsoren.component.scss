@@ -1,0 +1,66 @@
+
+
+.card-image {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+img {
+    top: 50%;
+    max-height: 15vh;
+    // transform: translate(0, -50%);
+}
+.image-header{
+    position: relative;
+    background-image: url(../../assets/sponsoren/sponsoren_background.jpg) ;
+    height: 100vh;
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+    
+}
+
+.single-column{
+    color:black;
+}
+
+.card-container {
+    position: relative;
+    padding:2%;
+}
+
+.page-background {
+    padding-top: 2%;
+}
+
+@media only screen and (max-width: 959px) {
+    .player-number {
+        font-size: 16vw;
+        line-height: 16vw;
+    }
+}
+.title4 {
+    stroke-width: 0.15;
+    -webkit-text-stroke: 2px white;
+    font-size: 7vw;
+    line-height: 10vw;
+    color: rgb(0,0,0,0);
+    // text-shadow: 1px 0 0 #E0071C, -1px 0 0 #E0071C, 0 1px 0 #E0071C, 0 -1px 0 #E0071C, 1px 1px #E0071C, -1px -1px 0 #E0071C, 1px -1px 0 #E0071C, -1px 1px 0 #E0071C;
+}
+
+.title {
+    text-align: center;
+    color:white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 14vw;
+    line-height: 10vw;
+}
+
+.title2 {
+    text-align: center;
+    color:black;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    padding-bottom: 5%;
+    font-size: 6vw;
+    line-height:6vw;
+}

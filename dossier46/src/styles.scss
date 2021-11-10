@@ -9,13 +9,35 @@ body { margin: 0; font-family: 'Courier New', Courier, monospace }
     src: url(./assets/NFL_Tampa_Bay_Buccaneers.otf) format("opentype");
 }
 
-
+.nav-button {
+    width: 4vw;
+    font-size: 4vw;
+    background: rgb(0,0,0,0);
+    border: none;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+.nav-button:hover {
+    color: red;
+    cursor: pointer;
+    text-shadow: none;
+}
 .paragraph {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 5%;
     padding-bottom: 0;
     font-size: 18pt;
     line-height: 20pt;
+}
+
+.absolute-paragraph {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5%;
+    color: white;
+    padding-bottom: 0;
+    font-size: 18pt;
+    line-height: 20pt;
+    position: absolute;
+    bottom: 5%;
 }
 
 .title {
@@ -26,20 +48,23 @@ body { margin: 0; font-family: 'Courier New', Courier, monospace }
     line-height: 18vh;
 }
 
-
-@media only screen and (min-width: 959px) {
-
-    .double-column{
-        margin-left: 20%;
-        margin-right: 20%;
-    }
-    
+.triple-column {
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .double-column {
     background: white;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
+.list {
+    font-weight: 900;
+}
+.list li {
+    margin: 10px 0;
+}
 .single-column {
     color: red;
     background: white;
@@ -49,7 +74,7 @@ body { margin: 0; font-family: 'Courier New', Courier, monospace }
 }
 
 .sub1 {
-    background:#E0074C; 
+    background:#E0071C; 
     color:white;
     padding-left: 2%;
     padding-right: 2%;
@@ -113,9 +138,6 @@ body { margin: 0; font-family: 'Courier New', Courier, monospace }
     text-decoration-line: none;
 }
 
-a:hover {
-    color: #E0071C;
-}
 
 .paragraph-image {
     box-shadow: 15px 15px 20px 5px rgb(0,0,0,0.4);
@@ -143,6 +165,8 @@ img {
         margin-left: 5%;
         margin-right: 5%;
     }
+
+
     .double-column{
         margin-left: 5%;
         margin-right: 5%;
@@ -164,8 +188,21 @@ img {
         background-color: rgba(255,255,255,0.8);
         // overflow: scroll;
     }
+    .absolute-paragraph {
+        padding-top: 3%;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 20px;
+        line-height: 24px;
+    }
 
 }
 
 
 
+.column-background-img{
+    color: white;
+    box-shadow:inset 0 0 0 2000px rgba(255, 0, 0, 0.6);
+    background-size: cover;
+
+}

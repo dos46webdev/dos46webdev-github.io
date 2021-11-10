@@ -1,0 +1,93 @@
+.text-block {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.title {
+    font-size: 8vw;
+    line-height: 8vw;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+    color: white;
+    padding-top: 10%;
+    font-family: 'Tampa_Bay';
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+
+
+
+}
+img:hover {
+    box-shadow:inset 0 0 0 2000px rgba(255, 0, 0, 0.6);
+}
+
+.thumbnail:hover .thumb-overlay{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.thumb-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:rgb(255,0,0,0.6);
+    
+}
+
+.thumbnail {
+    position: relative;
+    margin-top:18px;
+}
+
+img {
+    height: 100%;
+    width: auto;
+}
+.thumbnail-text {
+    transition: .5s ease;
+    font-family: 'Tampa_Bay';
+    font-size: 4vw;
+    line-height: 4vw;
+    font-weight: 900;
+    position: absolute;
+    left: 5%;
+    color: white;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+
+    bottom: 5%;
+}
+.double-column {
+    background-color: rgb(2555,255,255,0.6);
+    padding: 2%;
+}
+b {
+    color: #E0071C;
+}
+
+
+.static-page-background {
+    background-image: url(../../assets/inhoud.jpg);
+
+}
+
+@media only screen and (max-width: 959px) {
+    .text-block {
+        padding-top: 10%;
+        // padding: 2%;
+        margin-left: 5%;
+        margin-right: 2%;
+    }
+    .title {
+        font-size: 12vw;
+        line-height: 12vw;
+    }
+    .thumbnail-text {
+        font-size: 8vw;
+        line-height: 8vw;
+    }
+}

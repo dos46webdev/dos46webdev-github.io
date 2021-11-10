@@ -1,0 +1,45 @@
+.title {
+    width: 100%;
+    bottom: 5%;
+    padding:1%;
+    left: 5%;
+    position: absolute;
+    color: white;
+
+}
+
+.title2 {
+    font-family: 'Oswald';
+    
+    font-size: 8vw;
+    padding-left: 40%;
+    padding-right: 10%;
+    line-height: 8vw;
+    padding-top: 10%;
+    text-align: right;
+    color:white;
+    position: absolute;
+    // padding-top: 5%;
+    // z-index: 2;
+}   
+
+
+.quote {
+    color:  #E0071C;
+    font-size: 20pt;
+    line-height: 22pt;
+    font-weight: 900;
+}
+
+
+@media only screen and (max-width: 959px) {
+    .title {
+        font-size: 8vw;
+        line-height: 12vw;
+    }
+}
+
+.column-background-img{
+    background-image: url('../../assets/staf/IMG_1720.jpg');
+
+}

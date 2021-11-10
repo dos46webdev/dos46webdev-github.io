@@ -35,6 +35,7 @@ import { VrijwilligersComponent } from './vrijwilligers/vrijwilligers.component'
 import { ActiviteitenComponent } from './activiteiten/activiteiten.component';
 import { ProgrammaSelectieComponent } from './programma-selectie/programma-selectie.component';
 
+import { HttpClientModule } from '@angular/common/http';
 // making hammer config (3)
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
@@ -74,6 +75,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     HammerModule,
     FlexLayoutModule,
     MatListModule,
+    HttpClientModule
+    
   ],
   providers: [{ provide: HAMMER_GESTURE_CONFIG, useClass: MyHammerConfig }],
   bootstrap: [AppComponent]

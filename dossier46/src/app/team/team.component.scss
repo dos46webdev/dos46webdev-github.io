@@ -1,0 +1,52 @@
+.player-image {
+    width: 100%;
+    
+}
+
+.player-name {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+    font-size: 2vw;
+    line-height: 2vw;
+    color:black;
+
+}
+img {
+    background-image: url('../../assets/spelers/background_player.png');
+    background-size: cover;
+    width: 100%;
+
+    
+}
+.player-number {
+    position: absolute;
+    font-family: 'Tampa_Bay';
+    font-size: 5vw;
+    font-weight: 900;
+    line-height: 5vw;
+    top: 5%;
+    left: 2%;
+}
+
+.player-container {
+    position: relative;
+}
+.single-column{
+    position: relative;
+    text-align: center;
+    background: rgb(0,0,0,0);
+    border-top: solid 5px black;
+    border-bottom: solid 5px black;
+}
+
+.page-background {
+    padding-top: 2%;
+}
+
+@media only screen and (max-width: 959px) {
+    .player-number {
+        font-size: 16vw;
+        line-height: 16vw;
+    }
+}
