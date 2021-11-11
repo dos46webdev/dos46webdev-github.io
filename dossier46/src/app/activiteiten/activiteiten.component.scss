@@ -1,0 +1,119 @@
+.static-page-background {
+    background-image: url(../../assets/activiteiten_bg.jpg);
+    box-shadow:inset 0 0 0 2000px rgba(255, 0, 0, 0.4);
+    min-height: 100vh;
+}
+
+.single-column {
+    padding-top: 10%;
+    background: rgb(0,0,0,0);
+    font-weight: 900;
+    font-family: 'Teko', sans-serif;
+    overflow: hidden;
+    color: black;
+}
+
+.title {
+    color: white;
+    line-height: 12vh;
+}
+
+
+.calendar {
+    margin-top: 2%;
+    background: white;
+}
+.data {
+    width: 16vw;
+    height: auto;
+    background: white;
+    padding: 2%;
+    text-align: center;
+    
+}
+.dag {
+    
+    font-weight: 200;
+    font-size: 3vw;
+    line-height: 3vw;
+}
+.datum-nummer {
+    font-size: 10vw;
+    line-height: 8vw;
+}
+.maand{
+    font-size: 6vw;
+    line-height: 4vw;
+}
+
+.white {
+    background: white;
+    color: red;
+}
+
+.black {
+    color: white;
+    background: black;
+}
+
+.red {
+    color: white;
+    background: red;
+}
+
+.activity-title {
+    font-size: 4vw;
+    line-height: 4vw;
+}
+
+
+.sub-title {
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+}
+
+.activity {
+    margin-right: -1px; /* Thank you IE */
+    // background-color: white;
+    width: 100%;
+    padding: 5%;
+    text-align: left;
+
+}
+
+.calendar-item {
+
+    display: flex;
+    border-bottom: solid black;
+
+
+}
+
+.red-font {
+    color: red
+}
+
+.header-image {
+    float:right;
+    width: 20vw;
+
+}
+
+.title-container {
+    text-align: center;
+    display: flex;
+}
+
+@media only screen and (max-width: 959px) {
+    .title {
+        line-height: 12vw;
+    }
+
+}
+@media only screen and (max-width: 1200px) {
+
+    .header-image {
+        float:none;
+        width: 40vw;
+    }
+}

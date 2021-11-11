@@ -156,6 +156,12 @@ img {
     max-width:100%;
 }
 @media only screen and (max-width: 959px) {
+
+    .nav-button {
+        font-size: 10vw;
+        line-height: 10vw;
+        margin-right: 5%;
+    }
     .title {
         font-size: 10vw;
         line-height: 15vw;

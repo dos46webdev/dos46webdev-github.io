@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DomSanitizer, SafeHtml} from '@angular/platform-browser';
 @Component({
   selector: 'app-programma-selectie',
   templateUrl: './programma-selectie.component.html',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProgrammaSelectieComponent implements OnInit {
 
-  constructor() { }
+  eulaContent: SafeHtml = '';
+  constructor(private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
+    fetch('../../assets/programma.html').then(res => res.text()).then(data => {
+      this.eulaContent = this.sanitizer.bypassSecurityTrustHtml(data);
+      console.log(this.eulaContent)
+    })
   }
 
 }

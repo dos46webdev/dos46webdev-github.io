@@ -1,5 +1,6 @@
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { NgModule } from '@angular/core';
+import { HammerModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ActiviteitenComponent } from './activiteiten/activiteiten.component';
@@ -9,6 +10,7 @@ import { BestuurComponent } from './bestuur/bestuur.component';
 import { CoverPageComponentComponent } from './cover-page-component/cover-page-component.component';
 import { DerdeHelftComponent } from './derde-helft/derde-helft.component';
 import { GriftesideComponent } from './grifteside/grifteside.component';
+import { HammerTestComponent } from './hammer-test/hammer-test.component';
 import { HerbergPleinComponent } from './herberg-plein/herberg-plein.component';
 import { HoofdJeugdOpleidingComponent } from './hoofd-jeugd-opleiding/hoofd-jeugd-opleiding.component';
 import { InhoudComponent } from './inhoud/inhoud.component';
@@ -47,11 +49,12 @@ const routes: Routes = [
   {path: 'sponsoren', component: SponsorenComponent},
   {path: 'vrijwilligers', component: VrijwilligersComponent},
   {path: 'activiteiten', component: ActiviteitenComponent},
-  {path: 'programma-selectie', component: ProgrammaSelectieComponent}
+  {path: 'programma-selectie', component: ProgrammaSelectieComponent},
+  {path: 'test', component: HammerTestComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'top' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

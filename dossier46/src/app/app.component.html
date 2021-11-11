@@ -1,20 +1,20 @@
 
 
 
-<!-- <div style="height: 100%; width:100%;position:fixed;  z-index:10;" (swipeleft)="onNext()" (swiperight)="onPrevious()"> -->
-<div style='position: fixed; z-index: 200; width: 100%'>
-    <div style=" float:left;">
-      <button type="button" class='nav-button' (click)="onPrevious()" [disabled]="index===0"> < </button>
+<div style='position: fixed; z-index:10; width: 100vw;' >
+  <div style="float:left; margin-left: 2%;">
+    <button type="button" class='nav-button' (click)="onPrevious()"   [disabled]="index===0"> < </button>
 
-      </div>
-      <div style=" float:right;">
-        <button type="button" class='nav-button' (click)="onNext()" [disabled]="this.index == this.routeNames.length - 1">></button>
-      </div> 
+    </div>
+    <div style="float:right;  margin-right: 4%;">
+      <button type="button" class='nav-button' (click)="onNext()" [disabled]="this.index == this.routeNames.length - 1">></button>
+    </div> 
 
-  </div>
+</div>
 
-<!-- </div> -->
 
 <main [@Slider]="index" class="content">
   <router-outlet #outlet="outlet"></router-outlet>
 </main>
+
+<!-- (swipeleft)="onSwipeLeft($event,-1)" (swiperight)="onSwipeRight($event,1)" -->

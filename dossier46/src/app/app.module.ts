@@ -9,12 +9,11 @@ import { VoorwoordComponent } from './voorwoord/voorwoord.component';
 import { InhoudComponent } from './inhoud/inhoud.component';
 import {MatListModule} from '@angular/material/list'; 
 import {MatCardModule} from '@angular/material/card'; 
-
+import {MatGridListModule} from '@angular/material/grid-list'; 
 import * as Hammer from 'hammerjs';
-// import 'hammerjs'
-// import {Hammer} from 'hammerjs';
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import {MatToolbarModule} from '@angular/material/toolbar'; 
 
-import { HAMMER_GESTURE_CONFIG, HammerGestureConfig, HammerModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BestuurComponent } from './bestuur/bestuur.component';
 import { ArchiefComponent } from './archief/archief.component';
@@ -38,9 +37,10 @@ import { ProgrammaSelectieComponent } from './programma-selectie/programma-selec
 import { HttpClientModule } from '@angular/common/http';
 // making hammer config (3)
 export class MyHammerConfig extends HammerGestureConfig {
-  overrides = <any>{
-  swipe: { direction: Hammer.DIRECTION_ALL },
-  }};
+  overrides = <any> {
+    swipe: { direction: Hammer.DIRECTION_ALL },
+  };
+}
 
 @NgModule({
   declarations: [
@@ -72,10 +72,11 @@ export class MyHammerConfig extends HammerGestureConfig {
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    HammerModule,
     FlexLayoutModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule,
+    MatToolbarModule
     
   ],
   providers: [{ provide: HAMMER_GESTURE_CONFIG, useClass: MyHammerConfig }],

@@ -37,11 +37,11 @@ export class AppComponent {
   // console.log(this.currentRoute);
   routeCnt = this.routeNames.length;
   index: number = this.routeNames.indexOf(this.router.url.replace('/',''));
-  
+  slides = 0;
   // index: number = 0;
   onNext() {
     this.index = this.routeNames.indexOf(this.router.url.replace('/',''));
-
+    
     console.log(this.index)
     if (this.index + 1 < this.routeCnt) {
       
@@ -63,7 +63,15 @@ export class AppComponent {
         console.log("no such page")
       }
     } 
+    onSwipeRight(event: any, data:any) {
+      console.log("event right", event)
+      this.slides = this.slides + data
   
+      if (this.slides == 2) {
+        this.slides = 0
+      }
+      console.log(this.slides)
+    }
   // navigateToPage(direction: String): {
   //   if (direction == 'right') {
   //     index += 1;
