@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import {right,left} from './route-animations';
+import {right,left, slideTo} from './route-animations';
 import { RouterOutlet } from '@angular/router';
 import { Router,NavigationEnd  } from '@angular/router';
+import { InhoudComponent } from './inhoud/inhoud.component';
 import {
   trigger,
   transition} from '@angular/animations';
@@ -12,8 +13,8 @@ import {MatCardModule} from '@angular/material/card';
   selector: 'app-root',
   animations: [
     trigger('Slider', [
-      transition(':increment', right),
-      transition(':decrement', left),
+      transition(':increment', slideTo('right')),
+      transition(':decrement', slideTo('left')),
     ]),
   ],
   templateUrl: './app.component.html',
@@ -22,7 +23,7 @@ import {MatCardModule} from '@angular/material/card';
 
 
 export class AppComponent {
-
+  
   constructor(private router: Router){
     this.router = router;
     }
@@ -35,10 +36,16 @@ export class AppComponent {
 
   
   // console.log(this.currentRoute);
+  public isMenuOpen: boolean = false;
   routeCnt = this.routeNames.length;
   index: number = this.routeNames.indexOf(this.router.url.replace('/',''));
   slides = 0;
   // index: number = 0;
+
+  sideNavToggle(){
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
   onNext() {
     this.index = this.routeNames.indexOf(this.router.url.replace('/',''));
     
@@ -72,22 +79,15 @@ export class AppComponent {
       }
       console.log(this.slides)
     }
-  // navigateToPage(direction: String): {
-  //   if (direction == 'right') {
-  //     index += 1;
-  //   }
 
-  // }
+  navigateToPage(path: String){
+    this.router.navigate(['/', path]);
+    this.isMenuOpen = !this.isMenuOpen;
+
+  }
+
   title = 'dossier46';
-  // prepareRoute() {
-  //   if (this.index < this.prevIndex){
-  //     return 'isLeft'
-  //   } else {
-  //     return 'isRight'
-  //   }
-  //   // console.log(outlet.activatedRouteData['animation'])
-  //   // return outlet.activatedRouteData['animation'];
-  // }
+
 }
 
 

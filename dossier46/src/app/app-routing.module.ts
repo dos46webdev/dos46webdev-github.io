@@ -10,7 +10,6 @@ import { BestuurComponent } from './bestuur/bestuur.component';
 import { CoverPageComponentComponent } from './cover-page-component/cover-page-component.component';
 import { DerdeHelftComponent } from './derde-helft/derde-helft.component';
 import { GriftesideComponent } from './grifteside/grifteside.component';
-import { HammerTestComponent } from './hammer-test/hammer-test.component';
 import { HerbergPleinComponent } from './herberg-plein/herberg-plein.component';
 import { HoofdJeugdOpleidingComponent } from './hoofd-jeugd-opleiding/hoofd-jeugd-opleiding.component';
 import { InhoudComponent } from './inhoud/inhoud.component';
@@ -50,7 +49,6 @@ const routes: Routes = [
   {path: 'vrijwilligers', component: VrijwilligersComponent},
   {path: 'activiteiten', component: ActiviteitenComponent},
   {path: 'programma-selectie', component: ProgrammaSelectieComponent},
-  {path: 'test', component: HammerTestComponent}
 ];
 
 @NgModule({

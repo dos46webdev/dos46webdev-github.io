@@ -9,6 +9,9 @@ body { margin: 0; font-family: 'Courier New', Courier, monospace }
     src: url(./assets/NFL_Tampa_Bay_Buccaneers.otf) format("opentype");
 }
 
+.page-wrapper {
+    position: relative;
+}
 .nav-button {
     width: 4vw;
     font-size: 4vw;
@@ -104,13 +107,12 @@ body { margin: 0; font-family: 'Courier New', Courier, monospace }
     background-size: cover;
     background-position: center;
     z-index: -1;
-
-    // width: 100vw;
-
+    // padding-top: 80px;
 }
 
+
 .image-header {
-    
+    padding-top: 5vh;
     position: relative;
     background-repeat: no-repeat;
     max-height: 100vh;

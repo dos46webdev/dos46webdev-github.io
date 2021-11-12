@@ -1,8 +1,23 @@
-.player-image {
+.player-image-container {
     width: 100%;
-    
 }
 
+
+.team-title {
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    color: white;
+    font-size: 12vh;
+    line-height: 18vh;
+    position: absolute;
+    bottom: 5%;
+    text-align: center;
+}
+
+img {
+    bottom:0;
+}
 .player-name {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -12,13 +27,13 @@
     color:black;
 
 }
-img {
+.player-image {
     background-image: url('../../assets/spelers/background_player.png');
     background-size: cover;
     width: 100%;
-
-    
 }
+
+
 .player-number {
     position: absolute;
     font-family: 'Tampa_Bay';
@@ -49,4 +64,11 @@ img {
         font-size: 16vw;
         line-height: 16vw;
     }
+    .title {
+        font-size: 8vw;
+        line-height: 12vw;
+    }
 }
+
+
+

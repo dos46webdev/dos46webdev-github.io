@@ -9,6 +9,7 @@
     height: 100vh;
     bottom: 5%;
     
+    
     // position: absolute;
 
 }
@@ -81,7 +82,8 @@ img {
     .clear-single-column {
         position: relative;
         height:100%;
-        padding-top:5%;
+        // padding-top:5%;
+        padding-top:5vh;
     }
 
     .title-text-container {

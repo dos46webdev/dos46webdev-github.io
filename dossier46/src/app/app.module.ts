@@ -13,6 +13,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import * as Hammer from 'hammerjs';
 import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import {MatToolbarModule} from '@angular/material/toolbar'; 
+import {MatIconModule} from '@angular/material/icon'; 
+import {MatSidenavModule} from '@angular/material/sidenav'; 
+import {MatMenuModule} from '@angular/material/menu';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BestuurComponent } from './bestuur/bestuur.component';
@@ -76,7 +79,11 @@ export class MyHammerConfig extends HammerGestureConfig {
     MatListModule,
     HttpClientModule,
     MatGridListModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatMenuModule,
+
     
   ],
   providers: [{ provide: HAMMER_GESTURE_CONFIG, useClass: MyHammerConfig }],

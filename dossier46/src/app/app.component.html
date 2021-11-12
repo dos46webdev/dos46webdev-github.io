@@ -1,7 +1,7 @@
 
 
 
-<div style='position: fixed; z-index:10; width: 100vw;' >
+<!-- <div style='position: fixed; z-index:10; width: 100vw;' >
   <div style="float:left; margin-left: 2%;">
     <button type="button" class='nav-button' (click)="onPrevious()"   [disabled]="index===0"> < </button>
 
@@ -9,6 +9,133 @@
     <div style="float:right;  margin-right: 4%;">
       <button type="button" class='nav-button' (click)="onNext()" [disabled]="this.index == this.routeNames.length - 1">></button>
     </div> 
+
+</div> -->
+
+<!-- <ng-template ngFor let-route [ngForOf]="routeNames" let-i="index">
+  <li>{{i}} - {{route}}</li>
+</ng-template> -->
+
+<!-- <button mat-button class="menu-button">
+  
+</button> -->
+
+<!-- [matMenuTriggerFor]="menu" -->
+<mat-toolbar >
+  <mat-icon (click)="sideNavToggle()" mat-button  class='menu-button'>menu</mat-icon>
+    <button class='menu-button' (click)="onPrevious()"  > <a class="material-icons">arrow_back</a> </button>
+  <button  class='menu-button' (click)="onNext()" [routerLink]="['about']"><a class="material-icons">arrow_forward</a></button>
+  
+</mat-toolbar>
+
+
+<div class='menu' *ngIf="isMenuOpen">
+  <div class='double-column' fxLayoutGap="20px" fxLayout="row wrap" fxLayout.lt-md="column">
+      
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>VOORWOORD</div>
+          <img  src='../../assets/burgemeester_thumb.png'>
+          <div (click)="navigateToPage('voorwoord')" class='thumb-overlay'></div>
+      </div>
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>1 BESTUUR</div>
+          <img  src='../../assets/bestuur.JPG'>
+          <div (click)="navigateToPage('bestuur')" class='thumb-overlay'></div>
+      </div>
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>2 ARCHIEF</div>
+          <img  src='../../assets/Archief.JPG'>
+          <div (click)="navigateToPage('archief')" class='thumb-overlay'></div>
+      </div>
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>3 SPELERS VAN TOEN</div>
+          <img  src='../../assets/spelers-van-toen/spelers_van_toen_bg.JPG'>
+          <div (click)="navigateToPage('spelers-van-toen')" class='thumb-overlay'></div>
+      </div>
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>4 TOEKOMST</div>
+          <img  src='../../assets/toekomst_thumb.jpg'>
+          <div (click)="navigateToPage('toekomst-kampweek')" class='thumb-overlay'></div>
+      </div>
+
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>5 AIRDOME</div>
+          <img  src='../../assets/airdome/20191018_114733.jpg'>
+          <div (click)="navigateToPage('airdome')" class='thumb-overlay'></div>
+      </div>
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>6 HOOFD JEUGD OPLEIDING</div>
+          <img  src='../../assets/HJO/IMG_0966.jpg'>
+          <div (click)="navigateToPage('hoofd-jeugd-opleiding')" class='thumb-overlay'></div>
+      </div>
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>7 WALKING G-KORFBAL</div>
+          <img  src='../../assets/walking_g_korfbal/DSC_0753.JPG'>
+          <div (click)="navigateToPage('walking-g-korfbal')" class='thumb-overlay'></div>
+      </div>
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>8 KEES RODENBURG</div>
+          <img  src='../../assets/kees_rodenburg/kees.jpg'>
+          <div (click)="navigateToPage('kees-rodenburg')" class='thumb-overlay'></div>
+      </div>
+
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>9 STAF</div>
+          <img  src='../../assets/staf/IMG_1462.jpg'>
+          <div (click)="navigateToPage('staf')" class='thumb-overlay'></div>
+      </div>
+
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>10 TEAM</div>
+          <img  src='../../assets/IMG_4417.jpg'>
+          <div (click)="navigateToPage('team')" class='thumb-overlay'></div>
+      </div>
+
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>11 GRIFTESIDE</div>
+          <img  src='../../assets/grifteside/achter_muurtje_1981.jpg'>
+          <div (click)="navigateToPage('grifteside')" class='thumb-overlay'></div>
+      </div>
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>12 LIVERSTREAM</div>
+          <img  src='../../assets/livestream/Unknown-4.jpg'>
+          <div (click)="navigateToPage('livestream')" class='thumb-overlay'></div>
+      </div>
+
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>13 HERBERG PLEIN</div>
+          <img  src='../../assets/plein.jpg'>
+          <div (click)="navigateToPage('herberg-plein')" class='thumb-overlay'></div>
+      </div>
+
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>14 DERDE HELFT</div>
+          <img  src='../../assets/derde-helft/image-2223.png'>
+          <div (click)="navigateToPage('derfe-helft')" class='thumb-overlay'></div>
+      </div>
+
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>15 SPONSOREN</div>
+          <img  src='../../assets/sponsoren/sponsoren_background.jpg'>
+          <div (click)="navigateToPage('sponsoren')" class='thumb-overlay'></div>
+      </div>
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>16 VRIJWILLIGERS</div>
+          <img  src='../../assets/airdome/IMG_8612.JPG'>
+          <div (click)="navigateToPage('vrijwilligers')" class='thumb-overlay'></div>
+      </div>
+
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>17 ACTIVITEITEN</div>
+          <img  src='../../assets/activiteiten_bg.jpg'>
+          <div (click)="navigateToPage('activiteiten')" class='thumb-overlay'></div>
+      </div>
+      <div  class='thumbnail' fxFlex="0 1 calc(50% - 20px)">
+          <div class='thumbnail-text'>18 KL PROGRAMMA</div>
+          <img  src='../../assets/toekomst.jpg'>
+          <div (click)="navigateToPage('programma-selectie')" class='thumb-overlay'></div>
+      </div>
+  </div>
 
 </div>
 
