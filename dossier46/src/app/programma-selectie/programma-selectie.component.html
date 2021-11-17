@@ -1,1 +1,195 @@
-<div class='programma' [innerHTML]="eulaContent">...</div>
+<div class='static-page-background'>
+
+
+    <div class='clear-single-column single-column'>
+        <div class='title'>
+            PROGRAMMA A-SELECTIE 
+            2021-2022
+        </div>
+
+    </div>
+    <div class=' single-column'>
+        <div class='paragraph'>
+            Het Korfbal Leagueseizoen 2021/2022 wordt gespeeld
+            in twee fases. De competitie start met twee poules
+            met elk zes verenigingen. DOS’46 is ingedeeld in poule B.
+            <br><br>
+            Daarna is de tweede fase – nieuw van opzet – waarin onder andere
+            uitgevochten welke vier teams zich plaatsen voor de play-off s. De
+            Korfbal Leaguefi nale in Rotterdam Ahoy staat gepland op zaterdag 16
+            april 2022.
+            <br><br>
+            <div class='club-image-container'>
+                <img src='../../assets/ploegen/fortuna.png'>
+                <img src='../../assets/ploegen/kz.png'>
+                <img src='../../assets/ploegen/bw.png'>
+                <img src='../../assets/ploegen/ldodk.png'>
+                <img src='../../assets/ploegen/dalto.png'>
+                <img src='../../assets/ploegen/kcc.png'>
+            </div>
+            <div class='paragraph-title'>POUL A</div>
+
+            <div class='table-container'>
+              <table mat-table [dataSource]="poulA" class="mat-elevation-z8">
+
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+              
+                <!-- Position Column -->
+                <ng-container matColumnDef="position">
+                  <th mat-header-cell *matHeaderCellDef> </th>
+                  <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                </ng-container>
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+              
+                <!-- stad Column -->
+                <ng-container matColumnDef="stad">
+                  <th mat-header-cell *matHeaderCellDef> </th>
+                  <td mat-cell *matCellDef="let element"> {{element.stad}} </td>
+                </ng-container>
+              
+                <!-- Symbol Column -->
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+            </div>
+
+              <div class='club-image-container'>
+                <img src='../../assets/ploegen/pkc.png'>
+                <img src='../../assets/ploegen/top.png'>
+                <img src='../../assets/ploegen/dos.png'>
+                <img src='../../assets/ploegen/dvo.png'>
+                <img src='../../assets/ploegen/gg.png'>
+                <img src='../../assets/ploegen/oost_arnhem.png'>
+            </div>
+
+              <div class='paragraph-title'>POUL B</div>
+              <div class='table-container'>
+              <table mat-table [dataSource]="poulB" class="mat-elevation-z8">
+
+                <ng-container matColumnDef="position">
+                  <th mat-header-cell *matHeaderCellDef> </th>
+                  <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> </th>
+                  <td mat-cell [ngClass]="element.name == club ? 'bold': 'normal' " *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="stad">
+                  <th mat-header-cell *matHeaderCellDef> </th>
+                  <td mat-cell [ngClass]="element.stad == 'Nijeveen' ? 'bold': 'normal' " *matCellDef="let element"> {{element.stad}} </td>
+                </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+            </div>
+              
+              <div class='paragraph-title'>PROGRAMMA</div>
+              <div class='table-container'>
+                <table mat-table [dataSource]="programma" class="mat-elevation-z8">
+
+                  <ng-container matColumnDef="datum" sticky>
+                    <th mat-header-cell *matHeaderCellDef> </th>
+                    <td mat-cell class='datum' *matCellDef="let element"> {{element.datum}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="tijd">
+                    <th mat-header-cell *matHeaderCellDef> </th>
+                    <td mat-cell *matCellDef="let element"> {{element.tijd}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="team1">
+                    <th mat-header-cell *matHeaderCellDef> </th>
+                    <td mat-cell [ngClass]="element.team1 == team1 || element.team1 == team2 ? 'bold': 'normal' " *matCellDef="let element"> {{element.team1}} </td>
+                  </ng-container>
+
+                  <ng-container matColumnDef="team2">
+                    <th mat-header-cell *matHeaderCellDef> </th>
+                    <td mat-cell [ngClass]="element.team2 == team1 || element.team2 == team2 ? 'bold': 'normal' " *matCellDef="let element"> {{element.team2}} </td>
+                  </ng-container>
+                
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+                </table>
+              </div>
+
+
+              <!-- <table *ngIf="mobile" mat-table [dataSource]="programma" class="mat-elevation-z8">
+
+                <ng-container matColumnDef="datum">
+                  <th mat-header-cell *matHeaderCellDef> </th>
+                  <td mat-cell class='datum' *matCellDef="let element"> {{element.datum}}{{element.tijd}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="team1">
+                  <th mat-header-cell *matHeaderCellDef> </th>
+                  <td mat-cell [ngClass]="element.team1 == team1 || element.team1 == team2 ? 'bold': 'normal' " *matCellDef="let element"> {{element.team1}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="team2">
+                  <th mat-header-cell *matHeaderCellDef> </th>
+                  <td mat-cell [ngClass]="element.team2 == team1 || element.team2 == team2 ? 'bold': 'normal' " *matCellDef="let element"> {{element.team2}} </td>
+                </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+              </table> -->
+              
+              <!-- <table mat-table [dataSource]="programma" class="mat-elevation-z8">
+
+                <ng-container matColumnDef="datum">
+                  <th mat-header-cell *matHeaderCellDef> </th>
+                  <td mat-cell *matCellDef="let element"> {{element.datum}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="tijd">
+                  <th mat-header-cell *matHeaderCellDef> </th>
+                  <td mat-cell *matCellDef="let element"> {{element.tijd}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="team1">
+                  <th mat-header-cell *matHeaderCellDef> </th>
+                  <td mat-cell *matCellDef="let element"> {{element.team1}} </td>
+                </ng-container>
+              
+
+                <ng-container matColumnDef="team2">
+                  <th mat-header-cell *matHeaderCellDef> </th>
+                  <td mat-cell *matCellDef="let element"> {{element.team2}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+              </table> -->
+
+              <div class='finale-programma'>
+                <img src='../../assets/ploegen/kl.png'>
+                <div class='kl'>
+                    <div >
+                    <a>WEEKEND 2 APR.</a> <div >Play-off ronde 1</div> <br>
+                </div>
+                <div >
+                    <a>WEEKEND 9 APR.</a>  <div >Play-off ronde 2</div> <br>
+                </div>
+                <div >
+                    <a>ZA. 16 APR.</a>   <div>Korfbal Leaguefinale
+                    in Rotterdam Ahoy</div>
+                </div>
+                
+                </div>
+
+              </div>
+              
+        </div>
+       
+    </div>
+</div>

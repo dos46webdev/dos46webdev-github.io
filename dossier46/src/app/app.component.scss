@@ -88,11 +88,15 @@ button{
 .thumbnail {
     position: relative;
     margin-top:18px;
+    align-items: flex-start; /* new */
 }
 
 img {
     height: 100%;
-    width: auto;
+    max-height: 500px;
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
 }
 .thumbnail-text {
     transition: .5s ease;

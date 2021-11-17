@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoverPageComponentComponent } from './cover-page-component/cover-page-component.component';
 import { VoorwoordComponent } from './voorwoord/voorwoord.component';
 import { InhoudComponent } from './inhoud/inhoud.component';
+import {MatTableModule} from '@angular/material/table'; 
+
 import {MatListModule} from '@angular/material/list'; 
 import {MatCardModule} from '@angular/material/card'; 
 import {MatGridListModule} from '@angular/material/grid-list'; 
@@ -83,10 +86,11 @@ export class MyHammerConfig extends HammerGestureConfig {
     MatIconModule,
     MatSidenavModule,
     MatMenuModule,
+    MatTableModule
 
     
   ],
-  providers: [{ provide: HAMMER_GESTURE_CONFIG, useClass: MyHammerConfig }],
+  providers: [{ provide: HAMMER_GESTURE_CONFIG, useClass: MyHammerConfig },{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 

@@ -11,6 +11,9 @@
 
 }
 
+.image-header {
+    padding-top:50px;
+}
 .title2 {
     font-family: 'Oswald';
     
@@ -39,7 +42,6 @@
     width: 30vw;
     position: absolute;
     z-index: 12;
-    top: 10%;
     padding:1%;
     right: 5%;
 }
@@ -55,8 +57,9 @@
 @media only screen and (max-width: 959px) {
     .title {
         font-size: 8vw;
-        line-height: 12vw;
+        line-height: 8vw;
     }
+    
 }
 
 .column-background-img{

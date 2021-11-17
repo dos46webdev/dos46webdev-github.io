@@ -101,18 +101,25 @@ body { margin: 0; font-family: 'Courier New', Courier, monospace }
     font-weight: 900;
 }
 
+.link {
+    color: red;
+    font-weight: 900;
+}
 .static-page-background {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    z-index: -1;
+    padding-top:100px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     // padding-top: 80px;
 }
 
 
 .image-header {
-    padding-top: 5vh;
+    padding-top: 50px;
     position: relative;
     background-repeat: no-repeat;
     max-height: 100vh;
@@ -154,9 +161,6 @@ body { margin: 0; font-family: 'Courier New', Courier, monospace }
 
 }
 
-img {
-    max-width:100%;
-}
 @media only screen and (max-width: 959px) {
 
     .nav-button {
@@ -203,6 +207,13 @@ img {
         font-size: 20px;
         line-height: 24px;
     }
+
+    // .static-page-background {
+    //     background-repeat: no-repeat;
+    //     background-attachment: scroll;
+    //     background-size:cover;
+    // }
+
 
 }
 
